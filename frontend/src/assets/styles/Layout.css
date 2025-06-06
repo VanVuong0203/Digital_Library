@@ -1,0 +1,16 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    margin-top: 80px;
+}
+
+.main-container {
+    display: flex;
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+}

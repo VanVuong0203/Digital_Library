@@ -1,0 +1,120 @@
+.book-form-container-audio {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.book-form {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-column {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Cột 1 - Chỉ hiển thị ảnh bìa */
+.column-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-2 {
+    flex: 2;
+}
+
+.column-3 {
+    flex: 2;
+}
+
+/* Nhóm form label và input */
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.image-preview img {
+    width: 100%;
+    /* Chiều rộng chiếm 100% của phần tử chứa */
+    max-height: 250px;
+    /* Giới hạn chiều cao tối đa của ảnh */
+    object-fit: contain;
+    /* Đảm bảo ảnh không bị méo, duy trì tỷ lệ */
+    border-radius: 8px;
+    /* Bo tròn góc của ảnh */
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    /* Viền nhẹ xung quanh ảnh */
+}
+
+
+.button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    padding: 12px 24px;
+    font-weight: bold;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .book-form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .book-form {
+        flex-direction: column;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

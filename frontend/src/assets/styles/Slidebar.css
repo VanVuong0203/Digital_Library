@@ -1,0 +1,171 @@
+.slidebar {
+    width: 231px;
+    min-width: 231px;
+    background: #f8f9fa;
+    padding: 15px;
+    /* height: 100vh; */
+    position: static;
+    left: 0;
+    top: 80px;
+    overflow-y: auto;
+    border-right: 2px solid #ddd;
+}
+
+.slidebar-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: #304F9E;
+    padding: 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.slidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.slidebar-list li {
+    background: white;
+    margin: 8px 0;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slidebar-list li:hover {
+    background: #cadbf9;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+.arrow.rotate {
+    transform: rotate(225deg);
+}
+
+.dropdown-title {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    align-items: center !important;
+}
+
+.dropdown-title a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.submenu.open {
+    height: auto;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.submenu li {
+    padding: 8px;
+    font-size: 13px;
+    font-weight: normal;
+    background: #f1f3f5;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: background 0.2s;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background 0.2s ease;
+}
+
+.submenu li:hover {
+    background: #c5cfde;
+}
+
+.library-section {
+    background: #2B4D9E;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Danh sách thư viện */
+
+.library-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.library-list li {
+    background: white;
+    margin: 8px 0;
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.library-list li:hover {
+    background: #cadbf9;
+}
+
+.library-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slidebar a:hover,
+.library-list a:hover {
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 18px;
+}

@@ -1,0 +1,216 @@
+/* ========== HEADER ========== */
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 10px 0;
+}
+
+.account-heading {
+    font-size: 20px;
+    color: #304F9E;
+    font-weight: 700;
+}
+
+.account-create-btn {
+    padding: 10px 14px;
+    border-radius: 20px;
+    background-color: #304F9E;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.account-create-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* ========== TABLE ========== */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-x: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+/* Table Head */
+.details-title-item {
+    font-weight: 600;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #304F9E;
+    font-size: 14px;
+    border-right: 1px solid #eee;
+}
+
+
+.details-title-item:first-child {
+    border-top-left-radius: 10px;
+}
+
+.details-title-item:last-child {
+    border-right: none;
+    border-top-right-radius: 10px;
+}
+
+/* Table Body */
+.details-tbody .details-content-list:nth-child(even) .details-content-item {
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.details-content-item {
+    padding: 8px 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    border-top: 1px solid #eee;
+    word-break: break-word;
+    line-height: 1.4;
+    min-width: 80px;
+    max-width: 200px;
+    position: relative;
+}
+
+.details-content-item::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-content-item:last-child::after {
+    border-right: none;
+}
+
+.details-tbody .details-content-list:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.details-content-item-img {
+    width: 100%;
+}
+
+.details-content-item-btn,
+.details-content-item-btn-delete {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-content-item-btn {
+    background-color: #304F9E;
+    color: #fff;
+    font-size: 16px;
+    width: 80px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.details-content-item-btn:hover {
+    opacity: 0.8;
+}
+
+.details-content-item-btn-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    width: 60px;
+}
+
+.details-content-item-btn-delete:hover {
+    background-color: #c0392b;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== BOOK & RATING ========== */
+.book-cover {
+    width: 70px;
+    height: 105px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    object-fit: cover;
+}
+
+.star {
+    color: gold;
+    font-size: 16px;
+    margin: 0 1px;
+}
+
+.justify_item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center !important;
+}
+
+/* ========== SEARCH INPUT ========== */
+.search-input-admin {
+    width: 250px;
+    height: 30px;
+    border-radius: 40px;
+    padding: 5px 5px;
+    border: 1px solid var(--black2-color);
+    padding-left: 10px;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .details-table {
+        font-size: 12px;
+    }
+
+    .details-content-item,
+    .details-title-item {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.sort-select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

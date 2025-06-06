@@ -1,0 +1,171 @@
+.book-form-container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: #f9f9fc;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: slideUp 0.5s ease-in-out;
+    box-sizing: border-box;
+}
+
+.book-form-container h2 {
+    text-align: center;
+    color: #304F9E;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.book-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.book-form .form-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-form label {
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+    font-size: 16px;
+    display: block;
+    text-align: left;
+}
+
+.book-form input[type="text"],
+.book-form input[type="number"],
+.book-form input[type="file"],
+.book-form select,
+.book-form textarea {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.book-form input:focus,
+.book-form select:focus,
+.book-form textarea:focus {
+    border-color: #304F9E;
+    box-shadow: 0 0 0 3px rgba(48, 79, 158, 0.15);
+    outline: none;
+}
+
+.book-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    height: 158px;
+}
+
+.book-form input[type="file"] {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+.image-upload-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.book-form button {
+    padding: 16px 40px;
+    background-color: #304F9E;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-form button:hover {
+    background-color: #243d80;
+}
+
+.error-message {
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #f9d6d5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.image-column {
+    border: 1px solid red;
+    min-width: 250px;
+    min-height: 350px;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.preview-container {
+    width: 100%;
+    height: 100%;
+}
+
+.preview-container img {
+    object-fit: fill;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .book-form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-form {
+        grid-template-columns: 1fr;
+    }
+
+    .button-container {
+        grid-column: auto;
+    }
+
+    .book-form button {
+        width: 100%;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
